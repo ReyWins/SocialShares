@@ -17,7 +17,9 @@ a {
 
 a {
   background:
+
     linear-gradient(
+      
       to right,
       rgba(100, 200, 200, 1),
       rgba(100, 200, 200, 1)
@@ -32,6 +34,7 @@ a {
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 400ms;
+
 }
 
 a:hover {
@@ -63,22 +66,28 @@ nav ul li a {
 }
 
 .post {
+
 list-style: none;
 display: flex;
 flex-wrap: wrap;
-gap: 5px;
+gap: 15px;
+padding-left: 15px;
 align-items: center;
 justify-content: center;
-margin: 0;
+margin: 2px;
 padding-right: 10px;
+
 }
 
 .post li {
 display: grid;
+/*
 align-items: center;
 justify-items: center;
 place-items: center;
-padding-right: 5px;
+*/
+padding-right: 15px;
+
 }
 
 .share ul {
@@ -86,6 +95,8 @@ padding-right: 5px;
     align-items: center;
     justify-items: stretch;
     place-items: center;  
+    padding-right: 10px;
+    padding: 1px;
 }
 
 .share li {
@@ -93,7 +104,7 @@ padding-right: 5px;
     align-items: center;
     justify-items: stretch;
     place-items: center;
-    padding-right: 50px;
+    padding-right: 20px;
 }
 
 .wrapper {
@@ -135,9 +146,9 @@ color: #fff;
 
 .text-gradient {
 background-image: var(--accent-gradient);
--webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
-background-size: 700%;
+-webkit-background-clip: text;
+background-size: 800%;
 background-position: 0%;
 }
 .instructions {

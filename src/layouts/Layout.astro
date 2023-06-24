@@ -4,8 +4,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-import '../styles/global.css';
+
 import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 ---
 
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ import Footer from '../components/Footer.astro';
 		<title>{title}</title>
 	</head>
 	<body>
+		<Navigation />
 		<slot />
 		<Footer />
 	</body>

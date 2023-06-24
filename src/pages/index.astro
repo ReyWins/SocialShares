@@ -2,11 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import SocialShare from '../components/SocialShare.astro'
 import Navigation from '../components/Navigation.astro';
-
+import '../styles/global.css';
 ---
-
-<Navigation />
-
+<html>
 <Layout title="My Awesome Website">
 	<main>
 		<div class="wrapper">
@@ -23,24 +21,25 @@ import Navigation from '../components/Navigation.astro';
 			Elit at imperdiet dui accumsan sit amet. Non tellus orci ac auctor augue mauris augue neque gravida.
 			<br>
 				<br>	
-			<strong>Nunc</strong> aliquet bibendum enim facilisis gravida. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. A pellentesque sit amet porttitor eget dolor morbi. 
+			<strong>Nunc</strong> <code>aliquet bibendum enim facilisis gravida. Tellus rutrum tellus pellentesque eu</code> tincidunt tortor aliquam nulla facilisi. A pellentesque sit amet porttitor eget dolor morbi. 
 			Cras sed felis eget velit aliquet sagittis id consectetur purus. Viverra aliquet eget sit amet tellus cras. Massa tincidunt dui ut ornare lectus. Tellus integer feugiat scelerisque varius morbi enim nunc faucibus a. 
 			Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Parturient montes nascetur ridiculus mus mauris. Iaculis urna id volutpat lacus laoreet non curabitur. In nulla posuere sollicitudin aliquam ultrices sagittis orci. 
 			Ac tortor vitae purus faucibus ornare suspendisse.
 		
 		</p>
 		<div class="instructions">
-		<center><strong><strong>Share this post!</strong></strong></center>
+		<center><h2><strong><strong><span class="text-gradient">Share this post!</span></strong></strong></h2></center>
 			<SocialShare />
 				</div>
 			<ul class="post">
-				<li><button>Previous Post</button></li>
+				<li><button>Prev Post</button></li>
 				<li><button>Next Post</button></li>
 			</ul>
 			</div>
 		</center>
 		</article>
-	</div>
+	</div></div>
 
 	</main>
 </Layout>
+</html>
