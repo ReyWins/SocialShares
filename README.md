@@ -1,15 +1,17 @@
 # How To Use Social Media Share Links in an Astro Component! 🚀
 
-This is a simple demonstration on how we utilize the {Astro.url} function to grab our Astro websites URLs. This use case scenario is extremly helpful and easy for those who want to touch up their blog posts with a few easy steps. Since the JavaScript function returns the current page URL from the Request object, it gives us the data we need in order to convert it into a shareable URL. With the power of Astro, we've created a component file called "SocialShare.astro". This will give us the proper html clode that imports and utilize the JavaScript. 
+This is a simple demonstration on how we utilize the [{Astro.url}](https://docs.astro.build/en/reference/api-reference/#astrourl) function to grab our current URL path. This use case scenario is extremely helpful and easy to use for those who want to touch up their existing blog posts or websites with a few simple steps. 
 
-The goal of this is to share my knoweldge with all new Astronauts 🧑‍🚀 and those who are more seasoned!
+Since the JavaScript function returns the current page URL from the Request object, it gives us the data we need in order to convert it into a shareable URL. We're using a custom Component file called "SocialShare.astro". This will give us the proper html clode that imports and utilize the JavaScript. 
 
-Feel free to adjust add any features you seem fit. Please reference this Github page if you do, so we can all contribute this is very useful tool.
+The goal of this is to share my beginners knowledge with all new Astronauts 🧑‍🚀 and those who are more seasoned!
 
-I plan on updating this more whenever I have more free time.
+Feel free to adjust and add any features you seem fit! 
+
+I plan on updating this more over time.
 
 Enjoy!
-
+--------------------------------------------------------------------
 
 ➡️ View live demo: [Click Here](https://socialshares.netlify.app)
 
@@ -19,7 +21,7 @@ Enjoy!
 
 > Example of our Social Share buttons:
 
-![Example]([https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png](https://github.com/ReyWins/SocialShares/blob/master/src/images/socialex.png))
+![Example](https://github.com/ReyWins/SocialShares/blob/master/src/images/SharePost.png)
 
 
 # Twitter Output Example in Browser
@@ -27,8 +29,8 @@ Enjoy!
 
 ## 🚀 Recommended Installation Paths
 
-Below is the correct suggested path that you should use this Astro file as well as the JS script. 
-Note, you can place the JS file in whichever flow you currently have.
+Below is the correct suggested path that you should use this for this Astro Component file as well as the JavaScript file. 
+Note, you can place the *share.js file in any other path that works best for you. Just rememeber to import it correctly.
 
 ```
 /
@@ -64,7 +66,7 @@ export function getShareUrl(platform, url) {
   }
   
 ```
-> The javascript includes the correct URL share syntax that is used by various Social Media companies. You can simply add different types of social media links as long as you have the correct URL path and syntax. Simply add another switch statement to the existing file.
+> The javascript includes the correct URL share syntax that is used by various Social Media companies. You can simply add different types of social media links as long as you have the correct URL path and syntax. Simply add another switch statement to the existing file as your add more social media links.
 
 ## SocialShare.astro Component
 ```
@@ -91,7 +93,7 @@ import Icon from 'astro-icon';
 
 ## ☯ Pro's vs Con's of Current Features
 
-Of course our features has some limitations, hopefully this addresses some!
+Of course there are some limitations ... hopefully this addresses some!
 
 | Pros                                                      | Cons                                             |
 | :---------------------------------------------------------| :----------------------------------------------- |
