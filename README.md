@@ -91,7 +91,7 @@ import Icon from 'astro-icon';
 > This is where the magic 🪄 happens. 
 
 
-## ☯ Pro's vs Con's of Current Features
+## ☯ Current Features Pros vs Cons
 
 Of course there are some limitations ... hopefully this addresses some!
 
