@@ -1,13 +1,29 @@
 ---
-import { getShareUrl } from '../share.js';
+import { getShareUrl } from '../share.js'
 import Icon from 'astro-icon';
 ---
-<center>
-<div class="share">
-<ul>
-    <li><a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener"><Icon name=facebook width="35px" /></a></li>  
-        <li><a href={getShareUrl('twitter', Astro.url)} target="_blank" rel="noopener"><Icon name=twitter width="35px" /></a></li>
-            <li><a href={getShareUrl('linkedin', Astro.url)} target="_blank" rel="noopener"><Icon name=linkedin width="35px" /></a></li>
+
+<ul class="share">
+  <center>
+    <li>
+    <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+      <Icon name="facebook" width="35" height="35px" />
+    </a>
+  </li>  
+  <li>
+    <a href={getShareUrl('reddit', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="reddit" width="35" height="35px" />
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="twitter" width="35" height="35px" />
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="linkedin" width="35" height="35px" />
+    </a>
+  </li>
+  </center>
 </ul>
-</div>
-</center>
