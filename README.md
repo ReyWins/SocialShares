@@ -18,7 +18,7 @@ Enjoy!
 
 - We've added Reddit to the Social Shares links. This feature is simple and effective when we want our users to share on Reddit platform.
 - We're experimenting with the mobile versions of the code. We're trying to make the social media share links more accessible via mobile platforms and to launch the actual application. However, come to find out due to security reasons this isn't plausible unless we are using APIs. More to come later on that regard.
-- 
+- Made minor code adjustments.
 
 
 --------------------------------------------------------------------
