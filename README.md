@@ -12,6 +12,16 @@ I plan on updating this more over time.
 
 Enjoy!
 --------------------------------------------------------------------
+# 💫 Latest Version: 1.5 Beta
+
+## What's new:
+
+- We've added Reddit to the Social Shares links. This feature is simple and effective when we want our users to share on Reddit platform.
+- We're experimenting with the mobile versions of the code. We're trying to make the social media share links more accessible via mobile platforms and to launch the actual application. However, come to find out due to security reasons this isn't plausible unless we are using APIs. More to come later on that regard.
+- 
+
+
+--------------------------------------------------------------------
 
 ➡️ View live demo: [Click Here](https://socialshares.netlify.app)
 
@@ -44,26 +54,42 @@ Note, you can place the *share.js file in any other path that works best for you
 
 ## Share.js Script:
 ```
-export function getShareUrl(platform, url) {
-    let shareUrl = '';
-  
-    switch (platform) {
-      case 'facebook':
+export function getShareUrl(platform, url, description) {
+  let shareUrl = '';
+
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    typeof window !== 'undefined' && window.navigator.userAgent
+  );
+
+  switch (platform) {
+    case 'facebook':
+      if (isMobile) {
+        shareUrl = `fb://facewebmodal/f?href=${encodeURIComponent(url)}`;
+      } else {
         shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-        break;
-      case 'twitter':
-        shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}`;
-        break;
-      case 'linkedin':
-        shareUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(url)}`;
-        break;
-      default:
-        console.error(`Invalid platform: ${platform}`);
-        break;
-    }
-  
-    return shareUrl;
+      }
+      break;
+    case 'reddit':
+      if (isMobile) {
+        shareUrl = `https://reddit.app.link/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(description)}`;
+      } else {
+        shareUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(description)}`
+      }
+      break;
+    case 'twitter':
+      shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(description)}`;
+      break;
+    case 'linkedin':
+      shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(description)}`;
+      break;
+    default:
+      console.error(`Invalid platform: ${platform}`);
+      break;
   }
+
+  return shareUrl;
+}
+
   
 ```
 > The javascript includes the correct URL share syntax that is used by various Social Media companies. You can simply add different types of social media links as long as you have the correct URL path and syntax. Simply add another switch statement to the existing file as your add more social media links.
@@ -71,18 +97,35 @@ export function getShareUrl(platform, url) {
 ## SocialShare.astro Component
 ```
 ---
-import { getShareUrl } from '../share.js';
+import { getShareUrl } from '../js/share.js'
 import Icon from 'astro-icon';
 ---
-<center>
-<div class="share">
-<ul>
-    <li><a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener"><Icon name=facebook width="35px" /></a></li>  
-        <li><a href={getShareUrl('twitter', Astro.url)} target="_blank" rel="noopener"><Icon name=twitter width="35px" /></a></li>
-            <li><a href={getShareUrl('linkedin', Astro.url)} target="_blank" rel="noopener"><Icon name=linkedin width="35px" /></a></li>
+
+<ul class="share">
+  <center>
+    <li>
+    <a href={getShareUrl('facebook', Astro.url)} target="_blank" rel="noopener">
+      <Icon name="facebook" width="35" height="35px" />
+    </a>
+  </li>  
+  <li>
+    <a href={getShareUrl('reddit', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="reddit" width="35" height="35px" />
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('twitter', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="twitter" width="35" height="35px" />
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('linkedin', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="linkedin" width="35" height="35px" />
+    </a>
+  </li>
+  </center>
 </ul>
-</div>
-</center>
+
 
 ```
 > Import the *share.js* file and simply create an Unordered List tag to the amount of social media links you would like to use. You can customize this file based upon existing CSS styling.
@@ -103,8 +146,10 @@ Of course there are some limitations ... hopefully this addresses some!
 
 
 ## 🚧 Upcoming Works
-- Will add custom text to each shareable link.
-- Provide more information on other social media shareable links (with correct syntax).
+- Will add the title of the blog post to share links.
+- To see how we can start using APIs.
 
 ## ⚙️ Revisions
+July 2023 - 1.5: Released beta version and made minor changes.
+
 June 2023 - 1.0: Touched up Readme documentation.
