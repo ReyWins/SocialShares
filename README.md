@@ -21,7 +21,7 @@ Enjoy!
 
 > Example of our Social Share buttons:
 
-![Example](https://github.com/ReyWins/SocialShares/blob/master/src/images/SharePost.png)
+![Example](https://github.com/ReyWins/SocialShares/blob/master/src/images/SharePost1.5.png)
 
 
 # Twitter Output Example in Browser
