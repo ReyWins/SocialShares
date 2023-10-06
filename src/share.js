@@ -26,6 +26,15 @@ export function getShareUrl(platform, url, description) {
     case 'linkedin':
       shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&summary=${encodeURIComponent(description)}`;
       break;
+    case 'pinterest':
+      shareUrl = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(description)}`;
+      break;
+    case 'whatsapp':
+      shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(description)}%20${encodeURIComponent(url)}`;
+      break;
+    case 'email':
+      shareUrl = `mailto:?subject=${encodeURIComponent(description)}&body=${encodeURIComponent(url)}`;
+      break;
     default:
       console.error(`Invalid platform: ${platform}`);
       break;

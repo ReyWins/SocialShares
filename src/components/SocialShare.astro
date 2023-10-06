@@ -25,5 +25,19 @@ import Icon from 'astro-icon';
       <Icon name="linkedin" width="35" height="35px" />
     </a>
   </li>
+  <li>
+    <a href={getShareUrl('pinterest', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="pinterest" width="35" height="35px" />
+    </a>
+  </li>
+  <li>
+    <a href={getShareUrl('whatsapp', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+      <Icon name="whatsapp" width="35" height="35px" />
+    </a>
+    <li>
+      <a href={getShareUrl('email', Astro.url, 'Check out this blog post!')} target="_blank" rel="noopener">
+        <Icon name="email" width="35" height="35px" />
+      </a>
+    </li>
   </center>
 </ul>
