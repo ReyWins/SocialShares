@@ -41,6 +41,8 @@ Enjoy!
 
 ![Example](https://reywins.com/images/example.png)
 
+![Example](https://reywins.com/images/example2.png)
+
 
 # X (Twitter) Output Example in Browser
 >https://twitter.com/intent/tweet?url=https%3A%2F%2Fsocialshares.netlify.app%2F
@@ -183,8 +185,8 @@ Investigating as of Oct 2023.
 - To see how we can start using APIs.
 
 ## ⚙️ Revisions
-October 2023 - 2.0: Added new Social Media links.
+Oct 2023 - 2.0: Added new Social Media links.
 
-July 2023 - 1.5: Released beta version and made minor changes.
+Jul 2023 - 1.5: Released beta version and made minor changes.
 
-June 2023 - 1.0: Touched up Readme documentation.
+Jun 2023 - 1.0: Touched up Readme documentation.
