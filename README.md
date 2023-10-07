@@ -39,10 +39,10 @@ Enjoy!
 
 > Example of our Social Share buttons:
 
-![Example](https://github.com/ReyWins/SocialShares/blob/master/src/images/SharePost1.5.png)
+![Example](https://reywins.com/images/example.png)
 
 
-# Twitter Output Example in Browser
+# X (Twitter) Output Example in Browser
 >https://twitter.com/intent/tweet?url=https%3A%2F%2Fsocialshares.netlify.app%2F
 
 ## 🚀 Recommended Installation Paths
@@ -172,7 +172,7 @@ Of course there are some limitations ... hopefully this addresses some!
 | :---------------------------------------------------------| :----------------------------------------------- |
 | Strictly static to your existing site.                    | Does not work well within .MD/.MDX Formats       |
 | More secure since it doesn't rely on 3rd party functions. | Does not provide with your realtime clicks       |
-| Extremely Customizable!                                   | Doesn't provide text within shareable link.      |
+| Extremely Customizable!                                   | Doesn't provide page title within shareable link.      |
 
 ## 🪲 Known Bugs 
 - Reddit mobile version will not display share link properly. The desktop version still works.
