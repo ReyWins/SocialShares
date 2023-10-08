@@ -74,7 +74,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   text-align: center;
-  margin: 0 1rem; /* Add some horizontal spacing */
+  margin: 0 0.3rem; /* Add some horizontal spacing */
 }
 
 nav ul li a {
@@ -84,7 +84,40 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
 }
+/* Logo styles */
+.logo {
+  font-size: 1.5rem; /* Adjust font size as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+  background: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%); /* Apply gradient background to logo text */
+  -webkit-text-fill-color: transparent; /* Make text transparent */
+  -webkit-background-clip: text; /* Clip background to text */
+  margin-left: auto; /* Push the logo to the right */
+  margin-right: auto; /* Push the logo to the left */
+}
 
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    margin-top: 15px;
+    align-items: center; /* Center-align list items in mobile view */
+  }
+
+  nav li {
+    margin: 10px 0;
+    text-align: center; /* Center-align list items in mobile view */
+  }
+
+  .logo {
+    margin-left: 0;
+    margin-right: 0; /* Center-align the logo text in mobile view */
+    margin-bottom: 10px;
+  }
+}
 .post {
   list-style: none;
   display: flex;
